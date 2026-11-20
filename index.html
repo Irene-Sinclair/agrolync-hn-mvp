@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="AgroLync HN, piloto académico para conectar productores y compradores agrícolas en Honduras.">
-<title>AgroLync HN | Del campo a tu negocio</title>
+<title>AgroLync HN | Mercado agrícola de Honduras</title>
 <style>
 :root{--green:#183c2b;--green2:#27704d;--cream:#f6f4ea;--yellow:#edbe4c;--ink:#203327;--muted:#5d7065;--line:#dbe6d9}
 *{box-sizing:border-box}body{margin:0;font:16px/1.5 system-ui,-apple-system,Segoe UI,sans-serif;background:#f7f9f5;color:var(--ink)}
@@ -34,19 +34,57 @@ footer{background:#193c2b;color:#dfecde;padding:25px;text-align:center;margin-to
 dialog{border:none;border-radius:16px;box-shadow:0 20px 100px #0005;padding:30px;width:min(490px,calc(100% - 24px))}dialog::backdrop{background:#142d20aa}
 footer small{opacity:.75}
 @media(max-width:700px){header nav{margin-left:0}header{position:static}.twocol,.filters,.formrow{grid-template-columns:1fr}.hero{padding:62px 24px}main{margin-top:28px}}
+
+/* Renovación editorial inspirada en sitios corporativos del sector agrícola */
+:root{--green:#235a3a;--green2:#276c44;--yellow:#d6af58;--ink:#21382b;--muted:#667366;--line:#dfe6db}
+body{background:#fafbf8;font-family:Arial,Helvetica,sans-serif;color:var(--ink)}
+header{padding-top:17px;padding-bottom:17px;box-shadow:none;border-bottom:1px solid var(--line);position:relative}
+.logo{font-size:26px;color:#18482e}.logo em{color:#3e9061}
+header nav button{background:transparent;border-radius:0;color:#284532;font-weight:600}header nav button:hover{background:#edf4ed}
+button{border-radius:5px;font-weight:600}button.primary{background:#285f3d}
+.hero{padding:0;max-width:none;background:#f4f7f0;color:#1f412d}
+.hero-inner{max-width:1180px;margin:auto;padding:58px 22px;display:grid;grid-template-columns:1fr 0.92fr;gap:50px;align-items:center}
+.hero-copy .eyebrow{font-size:12px;color:#39734d;letter-spacing:2px;font-weight:bold;text-transform:uppercase}
+.hero h1{font-size:clamp(39px,4vw,61px);color:#1c462f;line-height:1.09;max-width:610px;letter-spacing:-1px;margin:17px 0}
+.hero p{color:#627064;max-width:600px;line-height:1.7}
+.hero .action{margin-top:28px}
+.hero .action button{padding:13px 20px;border-radius:5px}
+.hero .action button:not(.primary){background:#fff;border:1px solid #c7d8c9}
+.hero .hero-note{margin-top:23px;font-size:12px;color:#7b897d}
+.hero-photo{height:365px;border-radius:4px;background:linear-gradient(0deg,#0c2b1e7a,transparent 45%),url('https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=1300&q=82') center/cover;box-shadow:0 18px 35px #264b2c18;position:relative}
+.hero-photo span{position:absolute;bottom:20px;left:22px;color:#fff;font-size:20px;font-weight:700}
+.service-strip{display:flex;gap:40px;justify-content:center;flex-wrap:wrap;padding:27px 18px;background:#fff;border-bottom:1px solid var(--line)}
+.service-strip div{display:flex;flex-direction:column;gap:4px;min-width:200px;text-align:center}
+.service-strip strong{color:#245d3a}.service-strip span{font-size:13px;color:#718073}
+main{max-width:1180px;margin:38px auto}
+h2{font-size:30px;color:#184b30}
+.filters{grid-template-columns:2fr 1fr;background:#fff;padding:16px;border:1px solid var(--line);border-radius:5px}
+input,select{border-radius:5px}
+.grid{grid-template-columns:repeat(auto-fill,minmax(244px,1fr));gap:20px}
+.card{padding:0;overflow:hidden;border-radius:5px;box-shadow:0 5px 18px #1f41291a}
+.card .product-photo{height:158px;background:#e7efe3;display:flex;align-items:center;justify-content:center;font-size:70px;position:relative}
+.card .product-photo .pill{position:absolute;top:11px;left:11px;font-size:10px;letter-spacing:.5px}
+.card .product-content{padding:20px}.card h3{font-size:21px;color:#245333}
+.card .price{color:#245b3c}.card button{margin-top:12px}
+.panel{border-radius:5px;box-shadow:0 5px 18px #1f412913}
+.demo-panel{max-width:680px;margin:15px 0 25px;padding:23px;background:#edf4ee;border:1px solid #b9cfbd;border-left:5px solid #2e7045;border-radius:4px}
+.demo-panel strong{font-size:18px;color:#225738}.demo-panel p{font-size:14px;color:#58715f}
+.demo-actions{display:flex;flex-wrap:wrap;gap:10px}
+.demo-actions button{padding:13px 17px}.demo-actions button:not(.primary){background:#fff;border:1px solid #acc6b1}
+footer{background:#1b422d}
+@media(max-width:760px){.hero-inner{grid-template-columns:1fr;gap:24px;padding:45px 23px}.hero-photo{height:220px}.service-strip{gap:15px}.service-strip div{min-width:130px}}
 </style>
 </head>
 <body>
 <header><div class="logo">✳ Agro<em>Lync</em> HN</div>
 <nav><button data-page="catalog">Explorar cosechas</button><button data-page="orders">Mis pedidos</button><button data-page="producer">Mi cosecha</button></nav>
 <button id="account" data-page="auth" class="primary">Ingresar</button></header>
-<section class="hero"><span class="eyebrow">Piloto académico · Honduras</span><h1>Del campo hondureño<br>directo a tu negocio.</h1>
-<p>Una forma sencilla de conectar productores y compradores locales: productos disponibles, precios transparentes y solicitudes que el productor confirma.</p>
-<div class="action"><button class="yellow" data-page="catalog">Ver productos disponibles ↗</button><button data-page="producer">Soy productor →</button></div></section>
+<section class="hero"><div class="hero-inner"><div class="hero-copy"><span class="eyebrow">SOLUCIONES PARA EL AGRO HONDUREÑO</span><h1>La cosecha de Honduras, más cerca de tu negocio.</h1><p>Conectamos a pequeños productores con restaurantes, comercios y compradores. Un mercado más directo, transparente y fácil de utilizar.</p><div class="action"><button class="primary" data-page="catalog">Explorar productos</button><button data-page="producer">Publicar mi cosecha</button></div><p class="hero-note">Piloto académico · AgroLync HN · Compra local</p></div><div class="hero-photo" role="img" aria-label="Cultivos y producción agrícola"><span>Productos de nuestra tierra</span></div></div></section>
+<section class="service-strip"><div><strong>Catálogo agrícola</strong><span>Encuentra cosechas disponibles</span></div><div><strong>Pedidos confirmados</strong><span>Seguimiento entre productor y comprador</span></div><div><strong>Comercio local</strong><span>Conectando la producción de Honduras</span></div></section>
 <main><div id="message" class="alert hidden" role="status"></div>
-<section id="catalog"><div class="top"><div><h2>Cosechas disponibles</h2><div class="muted">Ofertas de productores que participan en el piloto.</div></div><button id="reload">Actualizar ↻</button></div>
+<section id="catalog"><div class="top"><div><h2>Productos agrícolas</h2><div class="muted">Cosechas reales cuando estén publicadas y productos de demostración claramente identificados.</div></div><button id="reload">Actualizar ↻</button></div>
 <div class="filters"><input id="search" placeholder="Buscar tomate, papa, lechuga…" aria-label="Buscar producto"><select id="zone" aria-label="Filtrar municipio"><option value="">Todas las zonas</option></select></div><div id="products" class="grid"></div></section>
-<section id="auth" class="hidden"><h2>Tu cuenta</h2><p class="muted">Para publicar o pedir productos debes registrarte. Usamos Supabase Auth.</p>
+<section id="auth" class="hidden"><h2>Acceso a AgroLync</h2><p class="muted">Para probar el sistema sin esperar el correo de confirmación, utiliza uno de los accesos demo.</p><div class="demo-panel"><strong>Acceso inmediato al piloto</strong><p>Los pedidos demo se guardan únicamente en este navegador y no son operaciones comerciales reales.</p><div class="demo-actions"><button id="demoBuyer" class="primary">Entrar como comprador demo</button><button id="demoProducer">Entrar como productor demo</button></div></div>
 <div class="panel" style="max-width:520px"><div><button id="loginTab" class="primary">Ingresar</button> <button id="signupTab">Crear cuenta</button></div>
 <form id="authForm"><div id="signupExtra" class="hidden"><label>Nombre</label><input id="fullName" maxlength="100" placeholder="Nombre y apellido"><label>Tipo de usuario</label><select id="role"><option value="buyer">Comprador</option><option value="producer">Productor</option></select></div>
 <label>Correo</label><input type="email" id="email" required autocomplete="email"><label>Contraseña</label><input type="password" id="password" required minlength="8" autocomplete="current-password"><button class="primary" style="margin-top:18px" type="submit" id="authSubmit">Ingresar</button></form>
@@ -66,13 +104,26 @@ footer small{opacity:.75}
 import {createClient} from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.49.8/+esm';
 const db=createClient('https://qysuyrnglqfdkdaxsbxk.supabase.co','sb_publishable_PKXnvNbFDvB2GDosdvTo7g_0OsC3Tg_');
 const $=id=>document.getElementById(id);const money=n=>'L '+Number(n).toLocaleString('es-HN',{minimumFractionDigits:2,maximumFractionDigits:2});
-let user=null,profile=null,items=[],selected=null,signingUp=false;
+let user=null,profile=null,items=[],selected=null,signingUp=false,demo=false;
+const DEMO=[
+{id:'demo-tomate',owner_id:'demo-producer',seller_name:'Finca Los Pinos (demo)',product_name:'Tomate pera',unit:'caja',quantity:35,price:480,municipality:'Comayagua',demo:true},
+{id:'demo-lechuga',owner_id:'demo-producer',seller_name:'Huerto Valle Verde (demo)',product_name:'Lechuga romana',unit:'caja',quantity:22,price:260,municipality:'Siguatepeque',demo:true},
+{id:'demo-maiz',owner_id:'demo-producer',seller_name:'Productores Olancho (demo)',product_name:'Maíz blanco',unit:'quintal',quantity:18,price:760,municipality:'Juticalpa',demo:true},
+{id:'demo-papa',owner_id:'demo-producer',seller_name:'Huerto El Edén (demo)',product_name:'Papa lavada',unit:'libra',quantity:220,price:14,municipality:'La Esperanza',demo:true},
+{id:'demo-cafe',owner_id:'demo-producer',seller_name:'Café Marcala (demo)',product_name:'Café tostado',unit:'libra',quantity:42,price:95,municipality:'Marcala',demo:true}
+];
+const store=(key,fallback)=>{try{return JSON.parse(localStorage.getItem(key))??fallback}catch{return fallback}};
+const demoOffers=()=>[...DEMO,...store('agrolync-demo-offers',[])];
+const demoOrders=()=>store('agrolync-demo-orders',[]);
+const emojip=n=>/tomate/i.test(n)?'🍅':/lechuga/i.test(n)?'🥬':/maíz|maiz/i.test(n)?'🌽':/papa/i.test(n)?'🥔':/caf/i.test(n)?'☕':'🌱';
+function startDemo(role){demo=true;profile={id:'demo-'+role,role,display_name:role==='producer'?'Productor Demo':'Comprador Demo'};user={id:profile.id,email:'demo@agrolync.local'};sessionStorage.setItem('agrolync-demo-role',role);accountUI();msg('Sesión de demostración iniciada. Los datos se guardan solo en este navegador.');screen(role==='producer'?'producer':'catalog');}
+$('demoBuyer').onclick=()=>startDemo('buyer');$('demoProducer').onclick=()=>startDemo('producer');
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function msg(text,error=false){const e=$('message');e.textContent=text;e.className='alert'+(error?' error':'');e.scrollIntoView({behavior:'smooth',block:'nearest'});}
 function screen(page){for(const id of ['catalog','auth','producer','orders'])$(id).classList.toggle('hidden',id!==page);if(page==='catalog')loadCatalog();if(page==='producer')loadProducer();if(page==='orders')loadOrders();window.scrollTo({top:330,behavior:'smooth'});}
 for(const b of document.querySelectorAll('[data-page]'))b.addEventListener('click',()=>screen(b.dataset.page));
 $('reload').onclick=loadCatalog;$('search').oninput=renderCatalog;$('zone').onchange=renderCatalog;
-function accountUI(){$('account').textContent=user?'Salir':'Ingresar';$('account').onclick=async()=>{if(user){await db.auth.signOut();user=null;profile=null;accountUI();screen('catalog');msg('Sesión finalizada.');}else screen('auth');};}
+function accountUI(){$('account').textContent=user?(demo?'Salir de demo':'Cerrar sesión'):'Ingresar';$('account').onclick=async()=>{if(user){if(!demo)await db.auth.signOut();demo=false;user=null;profile=null;sessionStorage.removeItem('agrolync-demo-role');accountUI();screen('catalog');msg('Sesión finalizada.');}else screen('auth');};}
 async function loadProfile(){if(!user){profile=null;return;}const {data,error}=await db.from('agro_profiles').select('*').eq('id',user.id).maybeSingle();if(error)throw error;profile=data;if(!profile)$('profileDialog').showModal();}
 $('profileForm').onsubmit=async e=>{e.preventDefault();const {error}=await db.from('agro_profiles').insert({id:user.id,display_name:$('profileName').value.trim(),role:$('profileRole').value});if(error)return msg(error.message,true);$('profileDialog').close();await loadProfile();msg('Perfil guardado.');screen(profile.role==='producer'?'producer':'catalog');};
 $('loginTab').onclick=()=>toggleSignup(false);$('signupTab').onclick=()=>toggleSignup(true);
@@ -83,30 +134,28 @@ else{const {data,error}=await db.auth.signInWithPassword({email,password});if(er
 accountUI();if(user&&profile)screen(profile.role==='producer'?'producer':'catalog');
 }catch(err){msg(err.message,true);}};
 async function ensureProfile(){if(!user)return;const {error}=await db.from('agro_profiles').insert({id:user.id,display_name:$('fullName').value.trim(),role:$('role').value});if(error){await loadProfile();return;}await loadProfile();}
-function renderCatalog(){const s=$('search').value.toLowerCase().trim(),z=$('zone').value;const filtered=items.filter(p=>(!s||p.product_name.toLowerCase().includes(s)||p.municipality.toLowerCase().includes(s))&&(!z||p.municipality===z));
-$('products').innerHTML=filtered.length?filtered.map(p=>'<div class="card"><span class="pill">'+esc(p.municipality)+'</span><h3>'+esc(p.product_name)+'</h3><div class="muted">Productor: '+esc(p.seller_name)+'</div><div class="price">'+money(p.price)+' <small>/ '+esc(p.unit)+'</small></div><p>Disponible: '+esc(p.quantity)+' '+esc(p.unit)+'</p><button class="primary" data-buy="'+esc(p.id)+'">Solicitar compra</button></div>').join(''):'<div class="empty">No hay cosechas disponibles con estos filtros. El piloto aún está incorporando productores.</div>';
-for(const b of document.querySelectorAll('[data-buy]'))b.onclick=()=>buy(b.dataset.buy);}
-async function loadCatalog(){const {data,error}=await db.from('agro_listings').select('id,owner_id,seller_name,product_name,unit,quantity,price,municipality,status').eq('status','available').gt('quantity',0).order('created_at',{ascending:false});if(error)return msg(error.message,true);items=data||[];const current=$('zone').value;const zones=[...new Set(items.map(p=>p.municipality))].sort();$('zone').innerHTML='<option value="">Todas las zonas</option>'+zones.map(z=>'<option value="'+esc(z)+'">'+esc(z)+'</option>').join('');$('zone').value=zones.includes(current)?current:'';renderCatalog();}
+function renderCatalog(){const q=$('search').value.toLowerCase().trim(),z=$('zone').value;const filtered=items.filter(p=>(!q||(p.product_name+' '+p.municipality).toLowerCase().includes(q))&&(!z||p.municipality===z));
+$('products').innerHTML=filtered.length?filtered.map(p=>'<article class="card"><div class="product-photo"><span class="pill">'+(p.demo?'DEMOSTRACIÓN':'PRODUCTO REAL')+'</span>'+emojip(p.product_name)+'</div><div class="product-content"><h3>'+esc(p.product_name)+'</h3><div class="muted">Productor: '+esc(p.seller_name)+'</div><div class="muted">'+esc(p.municipality)+'</div><div class="price">'+money(p.price)+' <small>/ '+esc(p.unit)+'</small></div><p>'+esc(p.quantity)+' '+esc(p.unit)+' disponibles</p><button class="primary" data-buy="'+esc(p.id)+'">Solicitar producto</button></div></article>').join(''):'<div class="empty">No se encontraron cosechas para estos filtros.</div>';for(const b of document.querySelectorAll('[data-buy]'))b.onclick=()=>buy(b.dataset.buy);}
+async function loadCatalog(){let data=[];if(!demo){const res=await db.from('agro_listings').select('id,owner_id,seller_name,product_name,unit,quantity,price,municipality,status').eq('status','available').gt('quantity',0).order('created_at',{ascending:false});if(res.error)msg('No se cargaron ofertas reales. Mostrando productos demo.',true);else data=res.data||[];}items=[...data,...demoOffers().filter(x=>x.status!=='paused'&&x.quantity>0)];const current=$('zone').value,zones=[...new Set(items.map(x=>x.municipality))].sort();$('zone').innerHTML='<option value="">Todas las zonas</option>'+zones.map(z=>'<option value="'+esc(z)+'">'+esc(z)+'</option>').join('');$('zone').value=zones.includes(current)?current:'';renderCatalog();}
 function buy(id){if(!user){msg('Para solicitar debes ingresar o crear una cuenta.');return screen('auth');}if(profile?.role!=='buyer'){msg('Para comprar se requiere una cuenta de comprador.',true);return;}selected=items.find(p=>p.id===id);if(!selected)return; $('buyTitle').textContent=selected.product_name;$('buyDetails').textContent=selected.seller_name+' · '+selected.municipality+' · '+money(selected.price)+' por '+selected.unit;$('buyQty').max=selected.quantity;$('buyQty').value=1;$('buyQty').oninput=()=>{$('total').textContent=money(Number($('buyQty').value)*Number(selected.price));};$('buyQty').oninput();$('purchaseDialog').showModal();}
 $('closeDialog').onclick=()=>$('purchaseDialog').close();
 $('purchaseForm').onsubmit=async e=>{e.preventDefault();if(!selected||!profile||!user)return;const quantity=Number($('buyQty').value);if(!(quantity>0&&quantity<=Number(selected.quantity)))return msg('Cantidad inválida',true);
-const {error}=await db.from('agro_orders').insert({listing_id:selected.id,buyer_id:user.id,buyer_name:profile.display_name,quantity,unit_price:selected.price});if(error)return msg(error.message,true);$('purchaseDialog').close();selected=null;msg('Solicitud registrada. El productor debe confirmarla.');screen('orders');};
+if(demo||selected.demo){const rows=demoOrders();rows.unshift({id:'demo-order-'+Date.now(),listing_id:selected.id,buyer_id:user.id,buyer_name:profile.display_name,product_name:selected.product_name,seller_name:selected.seller_name,quantity,unit:selected.unit,unit_price:selected.price,status:'requested',created_at:new Date().toISOString()});localStorage.setItem('agrolync-demo-orders',JSON.stringify(rows));$('purchaseDialog').close();msg('Pedido demo registrado en este navegador.');screen('orders');return;}
+const {error}=await db.from('agro_orders').insert({listing_id:selected.id,buyer_id:user.id,buyer_name:profile.display_name,quantity});if(error)return msg(error.message,true);$('purchaseDialog').close();msg('Solicitud enviada. El productor debe confirmarla.');screen('orders');};
 async function loadProducer(){if(profile?.role!=='producer'){$('producerGate').classList.remove('hidden');$('producerArea').classList.add('hidden');return;}$('producerGate').classList.add('hidden');$('producerArea').classList.remove('hidden');
-const [offers,orders]=await Promise.all([db.from('agro_listings').select('*').eq('owner_id',user.id).order('created_at',{ascending:false}),db.from('agro_orders').select('id,listing_id,buyer_name,product_name,quantity,unit,unit_price,status,created_at').order('created_at',{ascending:false})]);if(offers.error)return msg(offers.error.message,true);
-$('myListings').innerHTML=offers.data.length?offers.data.map(p=>'<div class="order"><strong>'+esc(p.product_name)+'</strong> · '+money(p.price)+' / '+esc(p.unit)+'<br>'+esc(p.quantity)+' disponibles · '+esc(p.status)+'</div>').join(''):'<div class="empty">Aún no has publicado ofertas.</div>';
-const ids=new Set(offers.data.map(p=>p.id)),mine=(orders.data||[]).filter(o=>ids.has(o.listing_id));if(orders.error)return msg(orders.error.message,true);
-$('sellerOrders').innerHTML=mine.length?mine.map(o=>'<div class="order"><strong>'+esc(o.product_name)+'</strong> · '+esc(o.quantity)+' '+esc(o.unit)+' · '+money(Number(o.quantity)*Number(o.unit_price))+'<br><span class="muted">Comprador: '+esc(o.buyer_name)+'</span> · <span class="status">'+esc(o.status)+'</span><div>'+ (o.status==='requested'?'<button class="primary" data-order="'+esc(o.id)+'" data-status="confirmed">Confirmar</button><button data-order="'+esc(o.id)+'" data-status="rejected">Rechazar</button>':o.status==='confirmed'?'<button class="primary" data-order="'+esc(o.id)+'" data-status="delivered">Marcar entregado</button>':'')+'</div></div>').join(''):'<div class="empty">Sin solicitudes por ahora.</div>';
+let offers=[],orders=[];if(demo){offers=demoOffers().filter(x=>x.owner_id==='demo-producer');orders=demoOrders().filter(x=>offers.some(y=>y.id===x.listing_id));}else{const a=await db.from('agro_listings').select('*').eq('owner_id',user.id),b=await db.from('agro_orders').select('id,listing_id,buyer_name,product_name,quantity,unit,unit_price,status,created_at');if(a.error||b.error)return msg((a.error||b.error).message,true);offers=a.data||[];orders=(b.data||[]).filter(x=>offers.some(y=>y.id===x.listing_id));}
+$('myListings').innerHTML=offers.length?offers.map(p=>'<div class="order"><strong>'+esc(p.product_name)+'</strong> · '+money(p.price)+'/'+esc(p.unit)+'<br>'+esc(p.quantity)+' disponibles</div>').join(''):'<div class="empty">Sin ofertas.</div>';
+$('sellerOrders').innerHTML=orders.length?orders.map(o=>'<div class="order"><strong>'+esc(o.product_name)+'</strong> · '+esc(o.quantity)+' '+esc(o.unit)+' · '+money(o.quantity*o.unit_price)+'<br>Comprador: '+esc(o.buyer_name)+' · <span class="status">'+esc(o.status)+'</span><div>'+(o.status==='requested'?'<button class="primary" data-order="'+esc(o.id)+'" data-status="confirmed">Confirmar</button><button data-order="'+esc(o.id)+'" data-status="rejected">Rechazar</button>':o.status==='confirmed'?'<button class="primary" data-order="'+esc(o.id)+'" data-status="delivered">Marcar entregado</button>':'')+'</div></div>').join(''):'<div class="empty">Sin pedidos recibidos.</div>';
 for(const b of $('sellerOrders').querySelectorAll('[data-order]'))b.onclick=()=>updateOrder(b.dataset.order,b.dataset.status);
 }
-async function updateOrder(id,status){const {error}=await db.from('agro_orders').update({status}).eq('id',id);if(error)return msg(error.message,true);msg('Estado actualizado.');await loadProducer();await loadCatalog();}
-$('listingForm').onsubmit=async e=>{e.preventDefault();if(profile?.role!=='producer')return;
-const payload={owner_id:user.id,seller_name:profile.display_name,product_name:$('productName').value.trim(),unit:$('unit').value,quantity:Number($('qty').value),price:Number($('price').value),municipality:$('municipality').value.trim()};
+async function updateOrder(id,status){if(demo){const arr=demoOrders(),o=arr.find(x=>x.id===id);if(!o)return;if(status==='confirmed'){const item=demoOffers().find(x=>x.id===o.listing_id);if(!item||item.quantity<o.quantity)return msg('Inventario insuficiente',true);const extras=store('agrolync-demo-offers',[]);if(extras.some(x=>x.id===item.id)){localStorage.setItem('agrolync-demo-offers',JSON.stringify(extras.map(x=>x.id===item.id?{...x,quantity:x.quantity-o.quantity}:x)));}}o.status=status;localStorage.setItem('agrolync-demo-orders',JSON.stringify(arr));msg('Pedido demo actualizado.');await loadProducer();return;}const {error}=await db.from('agro_orders').update({status}).eq('id',id);if(error)return msg(error.message,true);msg('Estado actualizado.');await loadProducer();await loadCatalog();}
+$('listingForm').onsubmit=async e=>{e.preventDefault();if(profile?.role!=='producer')return;const payload={owner_id:user.id,seller_name:profile.display_name,product_name:$('productName').value.trim(),unit:$('unit').value,quantity:Number($('qty').value),price:Number($('price').value),municipality:$('municipality').value.trim()};
+if(demo){const extras=store('agrolync-demo-offers',[]);extras.unshift({...payload,id:'demo-new-'+Date.now(),demo:true});localStorage.setItem('agrolync-demo-offers',JSON.stringify(extras));$('listingForm').reset();msg('Oferta demo creada.');await loadProducer();return;}
 const {error}=await db.from('agro_listings').insert(payload);if(error)return msg(error.message,true);$('listingForm').reset();msg('Oferta publicada.');await loadProducer();};
-async function loadOrders(){if(!user){$('myOrders').innerHTML='<div class="empty">Inicia sesión como comprador para ver tus pedidos.</div>';return;}
-const {data,error}=await db.from('agro_orders').select('id,product_name,seller_name,quantity,unit,unit_price,status,created_at').eq('buyer_id',user.id).order('created_at',{ascending:false});
-if(error)return msg(error.message,true);$('myOrders').innerHTML=data.length?data.map(o=>'<div class="order"><strong>'+esc(o.product_name)+'</strong> · '+esc(o.quantity)+' '+esc(o.unit)+' · '+money(Number(o.unit_price)*Number(o.quantity))+'<br><span class="muted">'+esc(o.seller_name)+' · '+new Date(o.created_at).toLocaleDateString('es-HN')+'</span> <span class="status">'+esc(o.status)+'</span> '+(o.status==='requested'?'<button data-cancel="'+esc(o.id)+'">Cancelar solicitud</button>':'')+'</div>').join(''):'<div class="empty">Aún no tienes pedidos.</div>';
-for(const b of $('myOrders').querySelectorAll('[data-cancel]'))b.onclick=async()=>{const {error}=await db.from('agro_orders').update({status:'cancelled'}).eq('id',b.dataset.cancel);if(error)msg(error.message,true);else{msg('Solicitud cancelada.');loadOrders();}};
+async function loadOrders(){if(!user){$('myOrders').innerHTML='<div class="empty">Inicia sesión como comprador para ver tus pedidos.</div>';return;}let data=[];if(demo){data=demoOrders().filter(x=>x.buyer_id===user.id);}else{const r=await db.from('agro_orders').select('id,product_name,seller_name,quantity,unit,unit_price,status,created_at').eq('buyer_id',user.id).order('created_at',{ascending:false});if(r.error)return msg(r.error.message,true);data=r.data||[];}
+$('myOrders').innerHTML=data.length?data.map(o=>'<div class="order"><strong>'+esc(o.product_name)+'</strong> · '+esc(o.quantity)+' '+esc(o.unit)+' · '+money(o.quantity*o.unit_price)+'<br><span class="muted">'+esc(o.seller_name)+' · '+new Date(o.created_at).toLocaleDateString('es-HN')+'</span> <span class="status">'+esc(o.status)+'</span> '+(o.status==='requested'?'<button data-cancel="'+esc(o.id)+'">Cancelar solicitud</button>':'')+'</div>').join(''):'<div class="empty">Todavía no hay pedidos.</div>';
+for(const b of $('myOrders').querySelectorAll('[data-cancel]'))b.onclick=async()=>{if(demo){const arr=demoOrders(),o=arr.find(x=>x.id===b.dataset.cancel);if(o)o.status='cancelled';localStorage.setItem('agrolync-demo-orders',JSON.stringify(arr));msg('Pedido demo cancelado.');loadOrders();return;}const {error}=await db.from('agro_orders').update({status:'cancelled'}).eq('id',b.dataset.cancel);if(error)msg(error.message,true);else{msg('Solicitud cancelada.');loadOrders();}};
 }
-(async()=>{try{const {data}=await db.auth.getUser();user=data.user;await loadProfile();accountUI();await loadCatalog();db.auth.onAuthStateChange((_e,s)=>{if(!s){user=null;profile=null;accountUI();}});}catch(e){msg('No se pudo conectar con el servicio: '+e.message,true);}})();
+(async()=>{try{const saved=sessionStorage.getItem('agrolync-demo-role');if(saved==='buyer'||saved==='producer'){demo=true;profile={id:'demo-'+saved,role:saved,display_name:saved==='producer'?'Productor Demo':'Comprador Demo'};user={id:profile.id,email:'demo@agrolync.local'};}else{const {data}=await db.auth.getUser();user=data.user;await loadProfile();}accountUI();await loadCatalog();db.auth.onAuthStateChange((_e,s)=>{if(!s&&!demo){user=null;profile=null;accountUI();}});}catch(e){msg('Error de conexión: '+e.message,true);}})();
 </script>
 </body></html>
